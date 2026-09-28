@@ -1,0 +1,29 @@
+[build-system]
+requires = ["uv_build >= 0.12.17, <0.13.0"]
+build-backend = "uv_build"
+
+[project]
+name = "rmectl"
+version = "0.1.0"
+authors = [
+  { name="Hoshino Lina", email="lina@lina.yt" },
+]
+description = "RME Digiface mixer interface"
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = "MIT"
+license-files = ["LICENSE"]
+dependencies = [
+  "libusb1",
+]
+
+[project.urls]
+Homepage = "https://github.com/hoshinolina/rmectl"
+Issues = "https://github.com/hoshinolina/rmectl/issues"
+
+[project.scripts]
+rmectl = "rmectl.cli:main"
